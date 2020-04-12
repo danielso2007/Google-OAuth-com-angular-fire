@@ -1,4 +1,4 @@
-[![Actions Status](https://github.com/danielso2007/google-oauth-com-angular-fire/workflows/google-oauth-com-angular-fire/badge.svg)](https://github.com/danielso2007/google-oauth-com-angular-fire/actions)
+![AngularCI](https://github.com/danielso2007/google-oauth-com-angular-fire/workflows/AngularCI/badge.svg?branch=master)
 ![GitHub package version](https://img.shields.io/github/package-json/v/danielso2007/google-oauth-com-angular-fire.svg)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/danielso2007/google-oauth-com-angular-fire.svg)](https://github.com/danielso2007/google-oauth-com-angular-fire/pulls)
 [![GitHub issues](https://img.shields.io/github/issues/danielso2007/google-oauth-com-angular-fire.svg)](https://github.com/danielso2007/google-oauth-com-angular-fire/issues?q=is%3Aopen+is%3Aissue)
