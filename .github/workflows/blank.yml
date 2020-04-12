@@ -10,9 +10,6 @@ on:
     - v*
     paths-ignore:
     - '**.md'
-    - '**.sh'
-    - '**.json'
-    - '**.yml'
   pull_request:
     branches:
     - master
