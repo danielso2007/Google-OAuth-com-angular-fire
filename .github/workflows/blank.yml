@@ -1,0 +1,54 @@
+name: AngularCI
+
+on:
+  push:
+    branches:
+    - master
+    - develop
+    - 'release/**'
+    tags:        
+    - v*
+    paths-ignore:
+    - '**.md'
+    - '**.sh'
+    - '**.json'
+    - '**.yml'
+  pull_request:
+    branches:
+    - master
+    - develop
+    - 'release/**'
+    tags:        
+    - v*
+
+jobs:
+  Test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x]
+    steps:
+    - uses: actions/checkout@v1
+    - name: Node $
+      uses: actions/setup-node@v1
+      with:
+        node-version: $
+    - name: npm install and npm run build
+      run: |
+        npm run build
+  Build:
+    needs: Test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x]
+    steps:
+    - uses: actions/checkout@v1
+    - name: Node $
+      uses: actions/setup-node@v1
+      with:
+        node-version: $
+    - name: npm install and npm run build
+      run: |
+        npm ci
+        npm run build:ci
