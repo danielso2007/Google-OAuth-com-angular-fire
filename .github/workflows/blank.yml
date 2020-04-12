@@ -30,8 +30,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node }}
-    - name: npm install and npm run build
+    - name: npm install -g @angular/ci, npm install and npm run build
       run: |
+        npm install -g @angular/ci
+        npm install
         npm run build
   Build:
     needs: Test
@@ -45,7 +47,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node }}
-    - name: npm install and npm run build
+    - name: npm install -g @angular/ci, npm install and npm run build
       run: |
+        npm install -g @angular/ci
         npm ci
         npm run build:ci
