@@ -9,10 +9,12 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent implements OnInit {
 
-  constructor(public auth: AuthService, private title: Title) { }
+  title = 'Welcome';
+
+  constructor(public auth: AuthService, public titleService: Title) { }
 
   ngOnInit(): void {
-    this.title.setTitle('Welcome');
+    this.titleService.setTitle(this.title);
   }
 
 }

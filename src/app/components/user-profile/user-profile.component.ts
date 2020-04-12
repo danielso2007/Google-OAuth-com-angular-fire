@@ -9,10 +9,12 @@ import { Title } from '@angular/platform-browser';
 })
 export class UserProfileComponent implements OnInit {
 
-  constructor(public auth: AuthService, private title: Title) { }
+  title = 'User Profile';
+
+  constructor(public auth: AuthService, public titleService: Title) { }
 
   ngOnInit(): void {
-    this.title.setTitle('User Profile');
+    this.titleService.setTitle('User Profile');
   }
 
 }
