@@ -47,3 +47,4 @@ Thumbs.db
 
 # Firebase settings must be proprietary.
 .env.ts
+.firebase/
