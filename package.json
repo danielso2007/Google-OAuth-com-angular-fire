@@ -1,6 +1,6 @@
 {
   "name": "google-oauth-com-angular-fire-app",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "lint": "ng lint",
     "e2e": "ng e2e",
