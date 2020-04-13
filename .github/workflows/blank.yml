@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [10.x, 12.x]
     steps:
     - uses: actions/checkout@v1
     - name: Cache node modules
@@ -39,15 +39,15 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm install -g @angular/cli, npm install and npm run build
       run: |
-        npm install -g @angular/cli
-        npm install
+        npm install -g --silent @angular/cli
+        npm install --silent
         npm run build
   Build:
     needs: Test
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [10.x, 12.x]
     steps:
     - uses: actions/checkout@v1
     - name: Cache node modules
@@ -63,6 +63,6 @@ jobs:
         node-version: ${{ matrix.node-version}}
     - name: npm install -g @angular/cli, npm install and npm run build
       run: |
-        npm install -g @angular/cli
+        npm install -g --silent @angular/cli
         npm ci
         npm run build:ci
