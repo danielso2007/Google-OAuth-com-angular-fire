@@ -12,7 +12,8 @@
     "test": "ng test --watch=false --browsers=ChromeHeadlessCustom",
     "test:watch": "ng test",
     "build:ci": "npm run clean && npm run build:prod",
-    "release": "standard-version"
+    "release": "standard-version",
+    "firebase:serve": "firebase serve --only hosting"
   },
   "private": true,
   "dependencies": {
